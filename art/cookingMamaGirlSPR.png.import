@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4svdmmgic1vq"
-path="res://.godot/imported/cookingMamaMoveSPR.png-f82dee313368d275cc8090db764c5476.ctex"
+uid="uid://egkve8goutdd"
+path="res://.godot/imported/cookingMamaGirlSPR.png-2bac6aab70fad1aa6b69a7aaca9deaf7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/cookingMamaMoveSPR.png"
-dest_files=["res://.godot/imported/cookingMamaMoveSPR.png-f82dee313368d275cc8090db764c5476.ctex"]
+source_file="res://art/cookingMamaGirlSPR.png"
+dest_files=["res://.godot/imported/cookingMamaGirlSPR.png-2bac6aab70fad1aa6b69a7aaca9deaf7.ctex"]
 
 [params]
 
