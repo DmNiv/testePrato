@@ -1,0 +1,121 @@
+[gd_scene load_steps=10 format=3 uid="uid://c5xkh7i6tod8i"]
+
+[ext_resource type="Script" path="res://CharacterBody2D.gd" id="1_mj1l3"]
+[ext_resource type="Texture2D" uid="uid://dwh5ephk3ou7h" path="res://art/cookingMamaIdleSPR.png" id="2_k1o3v"]
+
+[sub_resource type="Animation" id="Animation_3y44u"]
+resource_name = "idleDown"
+length = 0.8
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_yly30"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_yuqwk"]
+resource_name = "idleRight"
+length = 0.8
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [4, 5, 6, 7]
+}
+
+[sub_resource type="Animation" id="Animation_3oje4"]
+resource_name = "idleLeft"
+length = 0.8
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [8, 9, 10, 11]
+}
+
+[sub_resource type="Animation" id="Animation_n6s1s"]
+resource_name = "idleUp"
+length = 0.8
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [12, 13, 14, 15]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_c5kxd"]
+_data = {
+"RESET": SubResource("Animation_yly30"),
+"idleDown": SubResource("Animation_3y44u"),
+"idleLeft": SubResource("Animation_3oje4"),
+"idleRight": SubResource("Animation_yuqwk"),
+"idleUp": SubResource("Animation_n6s1s")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7r1je"]
+size = Vector2(16, 29)
+
+[node name="player" type="CharacterBody2D"]
+script = ExtResource("1_mj1l3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_k1o3v")
+offset = Vector2(16, 16)
+hframes = 4
+vframes = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_c5kxd")
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(16, 17.5)
+shape = SubResource("RectangleShape2D_7r1je")
