@@ -31,6 +31,13 @@ ui_shift={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_2="player"
+2d_physics/layer_3="objects"
+2d_physics/layer_4="interactables"
+2d_physics/layer_5="counters"
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0

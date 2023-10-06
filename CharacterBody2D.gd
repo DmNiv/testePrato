@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 var direction: String
+@onready var screenSize = get_viewport_rect().size
 @onready var animations = $Sprite2D/AnimationPlayer
 @onready var detector = $RayCast2D
 @export var speed: int = 60
@@ -13,6 +14,10 @@ func run():
 func walk():
 	speed = 60
 	animations.speed_scale = 1
+
+
+
+
 
 func getInput():
 	var moveDirection = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
@@ -50,3 +55,4 @@ func _process(delta):
 	getInput()
 	move_and_slide()
 	updateAnimation()
+	position = position.clamp(Vector2.ZERO, screenSize)
