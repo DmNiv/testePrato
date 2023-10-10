@@ -171,8 +171,6 @@ _data = {
 size = Vector2(16, 8)
 
 [node name="player" type="CharacterBody2D"]
-z_index = 1
-y_sort_enabled = true
 collision_layer = 2
 collision_mask = 28
 script = ExtResource("1_mj1l3")
@@ -194,4 +192,5 @@ shape = SubResource("RectangleShape2D_7r1je")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 position = Vector2(16, 21)
-target_position = Vector2(0, 25)
+target_position = Vector2(0, 16)
+collision_mask = 8
