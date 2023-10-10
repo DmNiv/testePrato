@@ -38,6 +38,11 @@ func drop():
 	carriedObject.global_position = carriedObject.global_position.clamp(Vector2.ZERO, screenSize)
 	carriedObject = null
 
+func dropIngrdiente(ingrediente):
+	var target = detector.get_collider()
+	if target != null:
+		target.addIngrediente(ingrediente)
+
 func getInput():
 	var moveDirection = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	
@@ -85,3 +90,7 @@ func _process(delta):
 		carriedObject.global_position = $Sprite2D.global_position + Vector2(8, 0) 
 		if Input.is_action_just_pressed("ui_c"):
 			drop()
+	if Input.is_action_just_pressed("ui_t"):
+		dropIngrdiente("tomate")
+	if Input.is_action_just_pressed("ui_m"):
+		dropIngrdiente("mussarela")
