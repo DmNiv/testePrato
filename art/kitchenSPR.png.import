@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://is5dmu5ms1ui"
-path="res://.godot/imported/undyneHouseTileMap.png-9ef306c899157a689139495605f4611d.ctex"
+uid="uid://cvkw28xg12cc0"
+path="res://.godot/imported/kitchenSPR.png-1475c67be69ac921f5ab56d0da5d0620.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/undyneHouseTileMap.png"
-dest_files=["res://.godot/imported/undyneHouseTileMap.png-9ef306c899157a689139495605f4611d.ctex"]
+source_file="res://art/kitchenSPR.png"
+dest_files=["res://.godot/imported/kitchenSPR.png-1475c67be69ac921f5ab56d0da5d0620.ctex"]
 
 [params]
 
